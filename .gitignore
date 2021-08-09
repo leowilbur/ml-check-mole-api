@@ -1,0 +1,19 @@
+# Serverless directories
+.serverless
+node_modules
+
+# golang output binary directory
+bin
+
+checkmymole-api
+ml-check-mole-api
+bin/checkmymole-api
+_utilities/get-token/get-token
+
+*.coverprofile
+coverage.out
+
+.swagger-codegen
+.swagger-codegen-ignore
+
+.vscode

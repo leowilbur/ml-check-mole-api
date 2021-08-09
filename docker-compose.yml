@@ -1,0 +1,8 @@
+postgres:
+  image: postgres:10.5
+  ports:
+    - "5432:5432"
+  environment:
+    POSTGRES_USER: molepatrol
+    POSTGRES_PASSWORD: molepatrol
+    POSTGRES_DB: molepatrol

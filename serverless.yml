@@ -1,0 +1,103 @@
+service: MolePatrol
+
+frameworkVersion: ">=1.28.0 <2.0.0"
+
+provider:
+  name: aws
+  runtime: go1.x
+  region: ap-southeast-2
+  stage: ${opt:stage}
+
+package:
+ exclude:
+   - ./**
+ include:
+   - ./bin/**
+
+functions:
+  rest:
+    handler: ./bin/molepatrol
+    tags:
+      project: 'molepatrol'
+    events:
+      - http:
+          method: ANY
+          path: /
+          cors:
+            origin: '*'
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+              - systemtype
+              - appid
+            allowCredentials: false
+      - http:
+          method: ANY
+          path: "/{proxy+}"
+          cors:
+            origin: '*'
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+              - systemtype
+              - appid
+            allowCredentials: false
+    environment:
+      POSTGRES: user=molepatrol password=Q637XUy1oUNdCgX1 dbname=molepatrol-${self:custom.stage} host=molepatrol.czaaedbzmswz.ap-southeast-2.rds.amazonaws.com sslmode=disable
+      DEBUG: false
+    vpc:
+      securityGroupIds:
+        - sg-086b83830403f1563
+      subnetIds:
+        - subnet-0c63942446945d5d7
+        - subnet-0bc564d32d7d1d005
+        - subnet-0bc564d32d7d1d005
+
+resources:
+  Resources:
+    AWSLambdaVPCAccessExecutionRole:
+      Type: AWS::IAM::ManagedPolicy
+      Properties:
+        Description: Creating policy for vpc connetion.
+        Roles:
+          - {"Ref" : "IamRoleLambdaExecution"}
+        PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+            - Effect: Allow
+              Action:
+                - ec2:CreateNetworkInterface
+                - ec2:DescribeNetworkInterfaces
+                - ec2:DeleteNetworkInterface
+              Resource: "*"
+            - Effect: Allow
+              Action:
+                - cognito-idp:AdminGetUser
+              Resource: arn:aws:cognito-idp:ap-southeast-2:515589013748:userpool/ap-southeast-2_gfSuuHw6e
+
+plugins:
+  - serverless-domain-manager
+  - serverless-apigw-binary
+
+custom:
+  stage: ${opt:stage, self:provider.stage}
+  customDomain:
+    domainName: ${self:custom.stage}.api.checkmoleapp.demo-redisys.com
+    basePath: ''
+    stage: ${self:custom.stage}
+    createRoute53Record: true
+    certificateName: ${self:custom.stage}.api.checkmoleapp.demo-redisys.com
+    endpointType: 'regional'
+  apigwBinary:
+   types:         
+     - 'image/jpeg'
+     - 'image/png'
+     - 'binary/octet-stream'

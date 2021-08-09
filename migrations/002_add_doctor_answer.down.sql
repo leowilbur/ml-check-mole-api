@@ -1,0 +1,1 @@
+ALTER TABLE requests DROP COLUMN answer NOT NULL;

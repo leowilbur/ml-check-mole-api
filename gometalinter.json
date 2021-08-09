@@ -1,0 +1,18 @@
+{
+  "Deadline": "2m",
+  "Enable": [
+    "goimports",
+    "golint",
+    "ineffassign",
+    "lll",
+    "misspell",
+    "vet",
+    "megacheck"
+  ],
+  "Exclude": [
+    "jwk_key.go",
+    "injected_key.go",
+    "docs/*"
+  ],
+  "LineLength": 100
+}

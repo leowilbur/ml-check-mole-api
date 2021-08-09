@@ -1,0 +1,1 @@
+ALTER TABLE accounts ADD COLUMN birth_date TEXT NOT NULL;
