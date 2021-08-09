@@ -1,20 +1,12 @@
-# ml-check-mole-api [![CircleCI](https://circleci.com/bb/meditekdevsteam/ml-check-mole-api/tree/master.svg?style=svg&circle-token=f4e27343641407b1f874f5ce57d7db243eac9f7e)](https://circleci.com/bb/meditekdevsteam/ml-check-mole-api/tree/master)
+# ml-check-mole-api
 
 This repository contains an implementation of the CheckMyMole API. All the
-endpoints have been described in the [Swagger definition](./swagger.yaml), which
-you can also [browse online](https://prod.api.checkmoleapp.demo-redisys.com/).
+endpoints have been described in the [Swagger definition](./swagger.yaml).
 
 ## Deploying
 
 In order to deploy this project to AWS Lambda, simply commit the changes to this
-repo and the CI process will take care of everything. The continuous deployment
-setup is as following:
-
-| Source branch | Target database    | Target domain                                     |
-|---------------|--------------------|---------------------------------------------------|
-| master        | molepatrol-master  | https://prod.api.checkmoleapp.demo-redisys.com    |
-| staging       | molepatrol-staging | https://staging.api.checkmoleapp.demo-redisys.com |
-| develop       | molepatrol-develop | https://dev.api.checkmoleapp.demo-redisys.com     |
+repo and the CI process will take care of everything. 
 
 In order to deploy the project manually, run the following:
 

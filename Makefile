@@ -18,15 +18,15 @@ update-docs:
 
 .PHONY: migrate-dev
 migrate-dev:
-	migrate -source file://./migrations -database postgres://molepatrol:Q637XUy1oUNdCgX1@molepatrol.czaaedbzmswz.ap-southeast-2.rds.amazonaws.com/molepatrol-dev up
+	migrate -source file://./migrations -database postgres://molepatrol:molepatrol@localhost:3306/molepatrol-dev up
 
 .PHONY: migrate-staging
 migrate-staging:
-	migrate -source file://./migrations -database postgres://molepatrol:Q637XUy1oUNdCgX1@molepatrol.czaaedbzmswz.ap-southeast-2.rds.amazonaws.com/molepatrol-staging up
+	migrate -source file://./migrations -database postgres://molepatrol:molepatrol@localhost:3306/molepatrol-staging up
 
 .PHONY: migrate-prod
 migrate-prod:
-	migrate -source file://./migrations -database postgres://molepatrol:Q637XUy1oUNdCgX1@molepatrol.czaaedbzmswz.ap-southeast-2.rds.amazonaws.com/molepatrol-prod up
+	migrate -source file://./migrations -database postgres://molepatrol:molepatrol@localhost:3306/molepatrol-prod up
 
 .PHONY: deploy-dev
 deploy-dev: clean build
