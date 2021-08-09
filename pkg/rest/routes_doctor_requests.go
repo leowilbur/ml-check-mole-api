@@ -7,11 +7,11 @@ import (
 	"strings"
 	"time"
 
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/models"
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/types"
 	fcm "github.com/appleboy/go-fcm"
 	"github.com/gin-gonic/gin"
 	"github.com/jackc/pgx/pgtype"
+	"github.com/leowilbur/ml-check-mole-api/pkg/models"
+	"github.com/leowilbur/ml-check-mole-api/pkg/types"
 )
 
 type extRequest struct {

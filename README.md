@@ -4,15 +4,6 @@ This repository contains an implementation of the CheckMyMole API. All the
 endpoints have been described in the [Swagger definition](./swagger.yaml), which
 you can also [browse online](https://prod.api.checkmoleapp.demo-redisys.com/).
 
-**SECURITY WARNING #1:** This repository contains hardcoded database credentials,
-which can be used to remotely access the database. This was not initially an issue,
-since the database was only available through a VLAN, but it prevented us from
-being able to run migrations on Circle CI.
-
-**SECURITY WARNING #2:** Doctor endpoints can potentially be used for SQL
-injection. It was assumed that the doctors interface will be private, allowing
-the implementation to be greatly simplified.
-
 ## Deploying
 
 In order to deploy this project to AWS Lambda, simply commit the changes to this

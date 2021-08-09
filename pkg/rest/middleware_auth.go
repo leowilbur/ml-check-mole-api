@@ -7,11 +7,11 @@ import (
 	"strings"
 	"time"
 
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/auth"
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/models"
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/types"
 	jwt "github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
+	"github.com/leowilbur/ml-check-mole-api/pkg/auth"
+	"github.com/leowilbur/ml-check-mole-api/pkg/models"
+	"github.com/leowilbur/ml-check-mole-api/pkg/types"
 )
 
 // AuthMiddleware validates the JWT token in the headers and checks its

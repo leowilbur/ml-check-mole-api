@@ -1,4 +1,4 @@
-module bitbucket.org/meditekdevsteam/ml-check-mole-api
+module github.com/leowilbur/ml-check-mole-api
 
 go 1.14
 

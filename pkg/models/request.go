@@ -3,8 +3,8 @@ package models
 import (
 	"context"
 
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/types"
 	"github.com/jackc/pgx/pgtype"
+	"github.com/leowilbur/ml-check-mole-api/pkg/types"
 )
 
 // RequestStatus is an ENUM used in the Request model. It describes the current

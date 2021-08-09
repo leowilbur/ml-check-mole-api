@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/ultis"
 	"github.com/gin-gonic/gin"
+	"github.com/leowilbur/ml-check-mole-api/pkg/ultis"
 )
 
 // UploadFileToAWS ...

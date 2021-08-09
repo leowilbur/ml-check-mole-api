@@ -3,7 +3,7 @@ package models
 import (
 	"context"
 
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/types"
+	"github.com/leowilbur/ml-check-mole-api/pkg/types"
 )
 
 // Account is a copy of Cognito's user details

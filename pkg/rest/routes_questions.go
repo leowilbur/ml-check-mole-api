@@ -3,10 +3,10 @@ package rest
 import (
 	"net/http"
 
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/models"
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/types"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/gin-gonic/gin"
+	"github.com/leowilbur/ml-check-mole-api/pkg/models"
+	"github.com/leowilbur/ml-check-mole-api/pkg/types"
 )
 
 // QuestionsList lists all questins

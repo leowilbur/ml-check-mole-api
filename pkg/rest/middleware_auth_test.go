@@ -16,10 +16,10 @@ import (
 	resty "gopkg.in/resty.v1"
 	jose "gopkg.in/square/go-jose.v2"
 
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/auth"
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/models"
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/rest"
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/types"
+	"github.com/leowilbur/ml-check-mole-api/pkg/auth"
+	"github.com/leowilbur/ml-check-mole-api/pkg/models"
+	"github.com/leowilbur/ml-check-mole-api/pkg/rest"
+	"github.com/leowilbur/ml-check-mole-api/pkg/types"
 )
 
 var _ = Describe("Auth middleware", func() {

@@ -11,8 +11,8 @@ import (
 	"github.com/namsral/flag"
 	"github.com/pzduniak/gateway"
 
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/auth"
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/rest"
+	"github.com/leowilbur/ml-check-mole-api/pkg/auth"
+	"github.com/leowilbur/ml-check-mole-api/pkg/rest"
 )
 
 var (

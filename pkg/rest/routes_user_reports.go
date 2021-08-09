@@ -9,12 +9,12 @@ import (
 	"strings"
 	"time"
 
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/models"
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/types"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/gin-gonic/gin"
 	"github.com/jackc/pgx/pgtype"
+	"github.com/leowilbur/ml-check-mole-api/pkg/models"
+	"github.com/leowilbur/ml-check-mole-api/pkg/types"
 )
 
 // ReportsCreate inserts a new report owned by the user, belonging to the lesion

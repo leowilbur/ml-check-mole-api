@@ -3,7 +3,7 @@ package models
 import (
 	"context"
 
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/types"
+	"github.com/leowilbur/ml-check-mole-api/pkg/types"
 )
 
 // ReportAnswer is an answer to a question in a report

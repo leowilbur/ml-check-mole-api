@@ -3,8 +3,8 @@ package models
 import (
 	"context"
 
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/types"
 	"github.com/jackc/pgx/pgtype"
+	"github.com/leowilbur/ml-check-mole-api/pkg/types"
 )
 
 // BodyPart contains information about a body part shown in the UI

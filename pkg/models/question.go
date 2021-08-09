@@ -3,7 +3,7 @@ package models
 import (
 	"context"
 
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/types"
+	"github.com/leowilbur/ml-check-mole-api/pkg/types"
 )
 
 // Question is a question shown to the user when they create a new report

@@ -13,8 +13,8 @@ import (
 	. "github.com/onsi/gomega"
 	uuid "github.com/satori/go.uuid"
 
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/models"
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/types"
+	"github.com/leowilbur/ml-check-mole-api/pkg/models"
+	"github.com/leowilbur/ml-check-mole-api/pkg/types"
 )
 
 var _ = Describe("Database model", func() {

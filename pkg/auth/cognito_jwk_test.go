@@ -4,7 +4,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/auth"
+	"github.com/leowilbur/ml-check-mole-api/pkg/auth"
 )
 
 var _ = Describe("CognitoJWK", func() {

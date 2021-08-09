@@ -10,8 +10,8 @@ import (
 	"github.com/rs/cors"
 	jose "gopkg.in/square/go-jose.v2"
 
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/docs/api"
-	"bitbucket.org/meditekdevsteam/ml-check-mole-api/pkg/models"
+	"github.com/leowilbur/ml-check-mole-api/docs/api"
+	"github.com/leowilbur/ml-check-mole-api/pkg/models"
 )
 
 // API is the REST API
